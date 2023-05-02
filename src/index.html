@@ -1,32 +1,94 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-   
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+  <header>
+    <h1>ACCESORIOS DE GATOS</h1>
+  </header>
 
-
-    <header>
- 
-    
-    <ul>
-
-      <li> <a href="">SERVICIOS</a></li>
-      <li> <a href="">CONTACTO</a></li>
-      <li> <a href="">MULTIMEDIA</a></li>
+  <ul> 
+    <li> <a href="">SERVICIOS</a></li>
+    <li> <a href="">CONTACTO</a></li>
+    <li> <a href="">MULTIMEDIA</a></li>
+    <img src="images/imagen_carrito_de_compras.png" alt="" width="100" height="80" class="carro">
   </ul>
 
-  
-    <img src="imagen carrito de compras.jpg" alt="" width="50" height="50" class="carro">   
+  <div class="tarjeta" id="tarjeta">
+    <div class="frente-tarjeta">
 
+      <img src="images/tarjeta_delantero.png" id="tarjeta" alt="frente de la tarjeta" width="350" height="200">
+      <div class="frente-tarjeta-data">
+        <p class="frente-tarjeta-numero" id="tarjeta-numero">#### #### #### #### </p>
+        <div class="frente-tarjeta-nombre">
+          <p class="frente-nombre" id="tarjeta-nombre">Ingrese su nombre</p>
+          <p class="frente-fecha">
+            <span id="tarjeta-mes">00</span>/
+            <span id="tarjeta-year">00</span>
+          </p>
 
+          <div class="atras-tarjeta">
+            <img src="images/tarjeta_atras.png" id="tarjetaA" alt="atras de tarjeta" width="350" height="200">
+            <div class="atras-tarjeta-data">
+              <p class="atras-cvv" id="tarjeta-cvv">000</p>
+            </div>
 
+        <main class="contenedor" id="contenedor">
+          <form class="formulario" id="formulario">
 
-  </body>
+            <div class="check">
+              <h1>REALIZAR PAGO</h1>
+            </div>
+
+            <div class="grupo">
+              <label for="inputname" class="label">NOMBRE DEL TITULAR</label>
+              <input type="text" class="input" id="inputname" placeholder="Ingrese su nombre" autocomplete="off"
+                required>
+              <!--el id se coecta con el for del label-->
+            </div>
+
+            <div class="grupo">
+              <label for="numero-tarjeta" class="label">NUMERO DE TARJETA</label>
+              <input type="text" class="input" id="numero-tarjeta" placeholder="#### #### #### ####" autocomplete="off"
+                maxlength="16" pattern="[0-9]+" required>
+            </div>
+            <div class="grupo">
+              <div class="expira">
+                <label for="inputmes" class="label">FECHA DE EXPIRACION (Mes/Año)</label>
+
+                <div class="mes">
+                  <input type="text" class="input" id="inputmes" placeholder="Mes" maxlength="2" required>
+                  <input type="text" class="input" id="inputano" placeholder="Año" maxlength="2" required>
+                </div>
+              </div>
+
+              <div class="cvc">
+                <label for="inputcvc" class="label">CVV</label>
+                <input type="password" class="input" id="inputcvc" placeholder="###" maxlength="3" required>
+
+            <input type="button" class="btn" id="verificar-tarjeta" value="FINALIZAR COMPRA" />
+            <p id="resultado"></p>
+          </form>
+        </main>
+
+        <div class="gracias disabled" id="gracias">
+
+          <p class="fin">GRACIAS POR SU COMPRA</p>
+          <p class="texto-final">Los datos de su tarjerta han sido añadidos</p>
+          <a class="confirmar" href="index.html">CONFIRMAR</a>
+        </div>
+<br>
+<br>
+<br>
+
+        <footer>
+          <div class="pie">
+            <p>
+              <b><strong> ACCESORIOS PARA GATOS:</strong> <em>todo lo mejor para el pequeño peludito de la casa, con todo el amor</em></b>
+          </div>
+
+            <script src="index.js" type="module"></script>
+   </body>
+
 </html>
-
-
-
